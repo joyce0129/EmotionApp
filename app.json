@@ -1,0 +1,32 @@
+{
+  "expo": {
+    "name": "EmotionApp",
+    "slug": "EmotionApp",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "https://github.com/joyce0129/EmotionApp/blob/main/src/img/Splash2.png?raw=true",
+      
+      "resizeMode": "contain",
+      "backgroundColor": "#4B3A27"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
