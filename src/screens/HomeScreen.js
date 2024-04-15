@@ -21,7 +21,7 @@ export default function HomeScreen({navigation}) {
                 <ScrollView >
                     
 
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年3月17日 星期日</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20 ,fontFamily:"cjkFonts"}}>2024年3月17日 星期日</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -46,15 +46,15 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/happyface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>開心</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10 ,fontFamily:"cjkFonts"}}>開心</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>今天吃到了夢寐以求的豆花加珍珠，好開心!</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>今天吃到了夢寐以求的豆花加珍珠，好開心!</Text>
                         </View>
                         
                     </View>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年3月18日 星期一</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年3月18日 星期一</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -79,15 +79,15 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/fearface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>緊張</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>緊張</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>要期中考了好緊張...</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>要期中考了好緊張...</Text>
                         </View>
                         
                     </View>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年3月19日 星期二</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年3月19日 星期二</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -112,16 +112,16 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/angryface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>震怒</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>震怒</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>捷運上有人推我!</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>捷運上有人推我!</Text>
                         </View>
 
                      
                     </View>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年3月20日 星期三</Text>  
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年3月20日 星期三</Text>  
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -146,11 +146,11 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/happyface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>開心</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>開心</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>內容預覽內容預覽內容預覽</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>內容預覽內容預覽內容預覽</Text>
                         </View>
                         
                     </View>
@@ -161,7 +161,7 @@ export default function HomeScreen({navigation}) {
         }else{
             return(
                 <ScrollView>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年3月</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年3月</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -171,7 +171,7 @@ export default function HomeScreen({navigation}) {
                                     uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/edit.png?raw=true"
                                 }}
                             />
-                            <Text style={{fontSize:18}}>17日</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>17日</Text>
                             <Image 
                                 style={styles.icon}
                                 source={{
@@ -187,11 +187,11 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/happyface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>開心</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>開心</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>今天吃到了夢寐以求的豆花加珍珠，好開心!</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>今天吃到了夢寐以求的豆花加珍珠，好開心!</Text>
                         </View>
                         
                     </View>
@@ -205,7 +205,7 @@ export default function HomeScreen({navigation}) {
                                     uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/edit.png?raw=true"
                                 }}
                             />
-                            <Text style={{fontSize:18}}>18日</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>18日</Text>
                             <Image 
                                 style={styles.icon}
                                 source={{
@@ -221,16 +221,16 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/fearface.png?raw=true?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>緊張</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>緊張</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>要期中考了好緊張...</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>要期中考了好緊張...</Text>
                         </View>
                         
                     </View>
 
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年4月</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年4月</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -240,7 +240,7 @@ export default function HomeScreen({navigation}) {
                                     uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/edit.png?raw=true"
                                 }}
                             />
-                            <Text style={{fontSize:18}}>12日</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>12日</Text>
                             <Image 
                                 style={styles.icon}
                                 source={{
@@ -256,15 +256,15 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/sadface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>失望</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>失望</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>期中考考差了...</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>期中考考差了...</Text>
                         </View>
                         
                     </View>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年5月</Text>
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年5月</Text>
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -274,7 +274,7 @@ export default function HomeScreen({navigation}) {
                                     uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/edit.png?raw=true"
                                 }}
                             />
-                            <Text style={{fontSize:18}}>10日</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>10日</Text>
                             <Image 
                                 style={styles.icon}
                                 source={{
@@ -290,16 +290,16 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/angryface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>震怒</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>震怒</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>捷運上有人推我!</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>捷運上有人推我!</Text>
                         </View>
 
                      
                     </View>
-                    <Text style={{fontSize:18,marginLeft:50,marginTop:20}}>2024年6月</Text>  
+                    <Text style={{fontSize:18,marginLeft:50,marginTop:20,fontFamily:"cjkFonts"}}>2024年6月</Text>  
                     <View style={styles.containerStyle}> 
                     
                         <View style={styles.iconContainer}>
@@ -309,7 +309,7 @@ export default function HomeScreen({navigation}) {
                                     uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/edit.png?raw=true"
                                 }}
                             />
-                            <Text style={{fontSize:18}}>3日</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>3日</Text>
                             <Image 
                                 style={styles.icon}
                                 source={{
@@ -325,11 +325,11 @@ export default function HomeScreen({navigation}) {
                                         uri:"https://github.com/joyce0129/EmotionApp/blob/main/src/img/happyface.png?raw=true"
                                     }}
                                 />
-                                <Text style={{fontSize:24,marginTop:10,marginLeft:10}}>開心</Text>
+                                <Text style={{fontSize:24,marginTop:10,marginLeft:10,fontFamily:"cjkFonts"}}>開心</Text>
                                
                         </View>
                         <View style={styles.wordContainer}>
-                            <Text style={{fontSize:18}}>內容預覽內容預覽內容預覽</Text>
+                            <Text style={{fontSize:18,fontFamily:"cjkFonts"}}>內容預覽內容預覽內容預覽</Text>
                         </View>
                         
                     </View>

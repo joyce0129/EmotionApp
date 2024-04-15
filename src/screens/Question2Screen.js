@@ -1,14 +1,16 @@
-import { Center, Text, Image, VStack, FlatList,Pressable } from "@gluestack-ui/themed";
-import { useTheme, useNavigation } from '@react-navigation/native';
+import { Center, Text, Image, VStack, FlatList } from "@gluestack-ui/themed";
+import { useTheme } from '@react-navigation/native';
+import { Dimensions } from 'react-native';
 
 import emotionData from "../json/emotions.json";
 import DetailList from "../components/DetailList";
 
 const Question2Screen = ({ route }) => {
     const { colors } = useTheme();
-    const navigation = useNavigation();
 
     const name = route.params; // 從 Q1 傳來的情緒名稱
+    const windowHeight = Dimensions.get('window').height; // 裝置的高
+    const marginY = (windowHeight - 504.5) / 2; // 504.5 為元件的約略總高度
     
     let emotions = emotionData.data;
 
@@ -38,19 +40,12 @@ const Question2Screen = ({ route }) => {
             imgSrc = emotions[3].img;
             break;
         default:
-            console.log("Q1 到 Q2 的資料未正確傳輸！");
+            console.log("Q1 到 Q2 的資料未正確傳輸");
     }
 
     return (
-        <VStack flex={1} bg={bgColor}>
-            <Pressable onPress={() => navigation.goBack()}>
-                    <Image
-                    source = {{uri: 'https://github.com/joyce0129/EmotionApp/blob/main/src/img/arrow_back_ios_new.png?raw=true'}}
-                    style={{width: 25, height: 25,marginTop:20,marginLeft:10}}
-                    />
-                </Pressable>
-            <Center >
-            <VStack mt={65}>
+        <Center flex={1} bg={bgColor}>
+            <VStack mt={marginY}>
                 <VStack alignItems="center">
                     <Image 
                         width={w}
@@ -58,19 +53,23 @@ const Question2Screen = ({ route }) => {
                         source={{ uri: imgSrc }}
                         alt={name}
                     />
-                    <Text color={colors.character} fontSize={30} mx={47} mt={25} mb={40}>哪個詞彙更能形容你的感受？</Text>
+                    <Text 
+                        fontFamily="cjkFonts"
+                        lineHeight={40}
+                        color={colors.character} 
+                        fontSize={30} 
+                        mx={47} mt={25} mb={40}>哪個詞彙更能形容你的感受？</Text>
                 </VStack>
                 <FlatList 
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     data={detail}
-                    renderItem={ ({ item }) =>  <DetailList detail={item} /> }
+                    renderItem={ ({ item }) =>  <DetailList detail={item} name={name} /> }
                     keyExtractor={ (item, index) => item + index }
+                    mb={marginY}
                 />
             </VStack>
         </Center>
-        </VStack>
-        
     );
 };
 

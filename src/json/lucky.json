@@ -1,0 +1,31 @@
+
+{
+    "horizontal":true,
+    "data": [
+       {
+        "title": "享用幸運餅乾",
+        "url": "",
+        "image": "https://github.com/joyce0129/EmotionApp/blob/main/src/img/twocookies.png?raw=true"
+        
+       },
+
+       {
+            "title": "享用幸運糖果",
+           
+            "url": "",
+            "image": "https://github.com/joyce0129/EmotionApp/blob/main/src/img/twocookies.png?raw=true"
+        
+        },
+
+        {
+            "title": "享用幸運貝果",
+           
+            "url": "",
+            "image": "https://github.com/joyce0129/EmotionApp/blob/main/src/img/twocookies.png?raw=true"
+            
+        }
+      
+ ]
+}
+
+ 

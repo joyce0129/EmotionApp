@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
     headerTitleStyle: {
       fontSize: 18,
       color:"#1D1D1D",
-      marginBottom:10
+      marginBottom:10,
+      fontFamily:"cjkFonts"
     },
 
     cardSectionStyle: {

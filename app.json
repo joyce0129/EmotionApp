@@ -1,15 +1,13 @@
 {
   "expo": {
-    "name": "EmotionApp",
-    "slug": "EmotionApp",
+    "name": "mid_2_Soso",
+    "slug": "mid_2_Soso",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    
     "userInterfaceStyle": "light",
     "splash": {
       "image": "https://github.com/joyce0129/EmotionApp/blob/main/src/img/Splash2.png?raw=true",
-      
       "resizeMode": "contain",
       "backgroundColor": "#4B3A27"
     },
@@ -27,6 +25,20 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "ef2bd4e0-4e25-4f2a-8f00-7a9b90285e53"
+      }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/ef2bd4e0-4e25-4f2a-8f00-7a9b90285e53"
     }
   }
 }

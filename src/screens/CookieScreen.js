@@ -14,11 +14,11 @@ const CookieScreen =({navigation})=>{
             <View style={styles.container}>
             
                 <View style={styles.wordContainer}>
-                    <Text style={{fontSize:30,color:"#1D1D1D",marginTop:20}}>請在心中默念你</Text>
+                    <Text style={{fontSize:30,color:"#1D1D1D",marginTop:20,fontFamily:"cjkFonts"}}>請在心中默念你</Text>
                 </View>    
 
                 <View style={styles.wordContainer}>
-                    <Text style={{fontSize:30,color:"#1D1D1D",}}>想知道的事</Text>
+                    <Text style={{fontSize:30,color:"#1D1D1D",fontFamily:"cjkFonts"}}>想知道的事</Text>
                 </View> 
             
                 <View style={styles.imgContainer}>
@@ -33,7 +33,7 @@ const CookieScreen =({navigation})=>{
                 <View style={styles.bottom}>
                 <Pressable
                     onPress={()=> navigation.navigate("LuckyDetail_cookieopen")}>
-                    <Text style={{fontSize:24,color:"#1D1D1D"}}>繼續</Text>
+                    <Text style={{fontSize:24,color:"#1D1D1D",fontFamily:"cjkFonts"}}>繼續</Text>
                 </Pressable>
                 
                 </View>

@@ -14,10 +14,10 @@ const CookieOpenScreen =({navigation})=>{
             <View style={styles.container}>
             
                 <View style={styles.wordContainer}>
-                    <Text style={{fontSize:30,color:"#1D1D1D",marginTop:20}}>準備好了嗎?</Text>
+                    <Text style={{fontSize:30,color:"#1D1D1D",marginTop:20,fontFamily:"cjkFonts"}}>準備好了嗎?</Text>
                 </View>    
                 <View style={styles.wordContainer}>
-                    <Text style={{fontSize:30,color:"#1D1D1D",}}></Text>
+                    <Text style={{fontSize:30,color:"#1D1D1D",fontFamily:"cjkFonts"}}></Text>
                 </View> 
             
                 <View style={styles.imgContainer}>
@@ -32,7 +32,7 @@ const CookieOpenScreen =({navigation})=>{
                 <View style={styles.bottom}>
                 <Pressable
                     onPress={()=> navigation.navigate("LuckyDetail_cookieopen")}>
-                    <Text style={{fontSize:24,color:"#1D1D1D"}}>打開幸運餅乾</Text>
+                    <Text style={{fontSize:24,color:"#1D1D1D",fontFamily:"cjkFonts"}}>打開幸運餅乾</Text>
                 </Pressable>
                 
                 </View>
