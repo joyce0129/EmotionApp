@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet,Image, TouchableOpacity, Button} from "react-native";
-import { Center, Text } from "@gluestack-ui/themed";
+import { StyleSheet,Image, TouchableOpacity} from "react-native";
+import { Text } from "@gluestack-ui/themed";
 
 import { NavigationContainer, useTheme, useNavigation } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -17,7 +17,6 @@ import Question1Screen from "../screens/Question1Screen";
 import Question2Screen from "../screens/Question2Screen";
 import DiaryScreen from "../screens/DiaryScreen";
 import TheTheme from "../theme";
-import HomeOneScreen from "../screens/HomeOneScreen"
 
 const Stack=createNativeStackNavigator();
 const Tab=createBottomTabNavigator();
@@ -44,7 +43,7 @@ const LuckyStack=()=>{
             name="Lucky"
             component={LuckyScreen}
             options={{headerShown:false}}
-        />
+            />
             <Stack.Screen
             name="LuckyDetail_cookie"
             component={CookieScreen}
@@ -70,17 +69,19 @@ const HomeStack=({navigation})=>{
             }}
         >
             <Stack.Screen
-            name="Home"
+            name="HomeScreen"
             component={HomeScreen}
             options={{
                 //headerShown:false,
-
+                headerTransparent: true, // 使 Header 透明化
+                headerBackTitleVisible: false, // 使 Header 上返回鍵的文字透明化，只適用於 iOS
+                headerTitle: "", //避免文字透明化沒起效，直接不寫標題
                 headerLeft:()=>(
                     <MaterialCommunityIcons
                     name={'menu'}
-                    size={20}
+                    size={24}
                     onPress={()=>navigation.openDrawer()}
-                    style={{marginRight:20}}
+                    //style={{marginLeft:20}}
                     />
                 ),
             }}/>
@@ -95,17 +96,15 @@ const MyTabs=()=>{
             screenOptions={{
                 tabBarActiveBackgroundColor:'#E4E3E3',
                 tabBarActiveTintColor:'#1D1D1D',
-                
-                headerShown:false
+                headerShown:false,
+                tabBarStyle: { height: 60 },
+                tabBarShowLabel: false, // 不顯示 icon 底下的文字
             }}
         >
             <Tab.Screen
-                name="Home"
+                name="HomeStack"
                 component={HomeStack}
                 options={{
-                    headerShown:false,
-                    title:"",
-
                     tabBarIcon:({color})=>(
                         <MaterialCommunityIcons name="book" color={color} size={30}
                         />
@@ -118,9 +117,6 @@ const MyTabs=()=>{
                 name="LuckyStack"
                 component={LuckyStack}
                 options={{
-                    headerShown:false,
-                    title:" ",
-
                     tabBarIcon:({color})=>(
                         <MaterialCommunityIcons name="star" color={color} size={30}
                         />
@@ -132,11 +128,8 @@ const MyTabs=()=>{
                 name="Question"
                 component={QuestionStack}
                 options={{
-                    headerShown:false,
-                    title:" ",
-
                     tabBarIcon:({color})=>(
-                        <MaterialCommunityIcons name="plus-circle-outline" color={color} size={37}
+                        <MaterialCommunityIcons name="plus-circle" color={color} size={37}
                         />
                     ),
                 }}
@@ -146,9 +139,6 @@ const MyTabs=()=>{
                 name="Doctor"
                 component={DoctorScreen}
                 options={{
-                    headerShown:false,
-                    title:" ",
-
                     tabBarIcon:({color})=>(
                         <MaterialCommunityIcons name="heart-flash" color={color} size={30}
                         />
@@ -159,11 +149,8 @@ const MyTabs=()=>{
                 name="Setting"
                 component={SettingScreen}
                 options={{
-                    headerShown:false,
-                    title:" ",
-
                     tabBarIcon:({color})=>(
-                        <MaterialCommunityIcons name="cog-outline" color={color} size={30}
+                        <MaterialCommunityIcons name="cog" color={color} size={30}
                         />
                     ),
                 }}
@@ -179,7 +166,7 @@ const QuestionStack = () => {
     
     return (
       <Stack.Navigator
-        initialRouteName="HomeStack"
+        initialRouteName="Q1"
         screenOptions={{
             headerTintColor: colors.character, // 改變返回鍵與 Header 文字的顏色
         }}
@@ -208,20 +195,19 @@ const QuestionStack = () => {
           name="Q2" 
           component={Question2Screen}
           options={() => ({
-            headerShown: false,
-            // headerTransparent: true, // 使 Header 透明化
-            // headerBackTitleVisible: false, // 使 Header 上返回鍵的文字透明化，只適用於 iOS
-            // headerTitle: "", //避免文字透明化沒起效，直接不寫標題
-            // headerLeft: () => (
-            //   <TouchableOpacity>
-            //     <MaterialCommunityIcons
-            //       name={"chevron-left"}
-            //       size={36}
-            //       onPress={() => navigation.goBack()}
-            //       style={{ color: colors.character }}
-            //     />
-            //   </TouchableOpacity>
-            // )
+            headerTransparent: true, // 使 Header 透明化
+            headerBackTitleVisible: false, // 使 Header 上返回鍵的文字透明化，只適用於 iOS
+            headerTitle: "", //避免文字透明化沒起效，直接不寫標題
+            headerLeft: () => (
+              <TouchableOpacity>
+                <MaterialCommunityIcons
+                  name={"chevron-left"}
+                  size={36}
+                  onPress={() => navigation.navigate("Q1")}
+                  style={{ color: colors.character }}
+                />
+              </TouchableOpacity>
+            )
           })}
         />
         <Stack.Screen
@@ -292,12 +278,11 @@ export const MyDrawer=()=>{
     return(
         <Drawer.Navigator
            screenOptions={{
-            
             drawerActiveBackgroundColor:'#F5F5F5',
             drawerActiveTintColor:'#1D1D1D',
             drawerInactiveTintColor:'gray',
             drawerStyle:{width:250},
-            drawerLabelStyle:{fontSize:14,fontWeight:'400'}
+            drawerLabelStyle:{fontSize:14,fontWeight:'400'},
         }}
         drawerContent={props=><Drawercontent{...props}/>}
         >
@@ -357,67 +342,67 @@ export const MyDrawer=()=>{
     )
 }
 
-//AccountStack
-const AccountStack=({navigation})=>{
-    return(
-        <Stack.Navigator>
-            <Stack.Screen
-            name="Account"
-            component={AccountScreen}
-            options={{headerShown:false,
-                headerLeft:()=>(
-                    <MaterialCommunityIcons
-                    name={'menu'}
-                    size={20}
-                    onPress={()=>navigation.openDrawer()}
-                    style={{marginRight:20}}
-                    />
-                ),
-            }}/>
-        </Stack.Navigator>
-    )
-}
+// //AccountStack
+// const AccountStack=({navigation})=>{
+//     return(
+//         <Stack.Navigator>
+//             <Stack.Screen
+//             name="Account"
+//             component={AccountScreen}
+//             options={{headerShown:false,
+//                 headerLeft:()=>(
+//                     <MaterialCommunityIcons
+//                     name={'menu'}
+//                     size={20}
+//                     onPress={()=>navigation.openDrawer()}
+//                     style={{marginRight:20}}
+//                     />
+//                 ),
+//             }}/>
+//         </Stack.Navigator>
+//     )
+// }
 
 
-//HelpStack
-const HelpStack=({navigation})=>{
-    return(
-        <Stack.Navigator>
-            <Stack.Screen
-            name="Help"
-            component={HelpScreen}
-            options={{headerShown:false,
-                headerLeft:()=>(
-                    <MaterialCommunityIcons
-                    name={'menu'}
-                    size={20}
-                    onPress={()=>navigation.openDrawer()}
-                    style={{marginRight:20}}
-                    />
-                ),
-            }}/>
-        </Stack.Navigator>
-    )
-}
+// //HelpStack
+// const HelpStack=({navigation})=>{
+//     return(
+//         <Stack.Navigator>
+//             <Stack.Screen
+//             name="Help"
+//             component={HelpScreen}
+//             options={{headerShown:false,
+//                 headerLeft:()=>(
+//                     <MaterialCommunityIcons
+//                     name={'menu'}
+//                     size={20}
+//                     onPress={()=>navigation.openDrawer()}
+//                     style={{marginRight:20}}
+//                     />
+//                 ),
+//             }}/>
+//         </Stack.Navigator>
+//     )
+// }
 
-//LogoutStack
-const LogoutStack=({navigation})=>{
-    return(
-        <Stack.Navigator>
-            <Stack.Screen
-            name="Logout"
-            component={LogoutScreen}
-            options={{headerShown:false,
-                headerLeft:()=>(
-                    <MaterialCommunityIcons
-                    name={'menu'}
-                    size={20}
-                    onPress={()=>navigation.openDrawer()}
-                    style={{marginRight:20}}
-                    />
-                ),
-            }}/>
-        </Stack.Navigator>
-    )
-}
+// //LogoutStack
+// const LogoutStack=({navigation})=>{
+//     return(
+//         <Stack.Navigator>
+//             <Stack.Screen
+//             name="Logout"
+//             component={LogoutScreen}
+//             options={{headerShown:false,
+//                 headerLeft:()=>(
+//                     <MaterialCommunityIcons
+//                     name={'menu'}
+//                     size={20}
+//                     onPress={()=>navigation.openDrawer()}
+//                     style={{marginRight:20}}
+//                     />
+//                 ),
+//             }}/>
+//         </Stack.Navigator>
+//     )
+// }
 export default Navigation;
