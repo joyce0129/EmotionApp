@@ -344,12 +344,12 @@ export default function HomeScreen({navigation}) {
             tabStyle={{ 
                 
                backgroundColor: "white",
-               marginTop: 50,
+               marginTop: 70,
                borderColor: "gray",
             }}
             activeTabStyle={{
                backgroundColor: "gray",
-               marginTop: 50,    
+               marginTop: 70,    
                borderColor: "gray",       
             }}
             firstTabStyle={{ marginLeft: 50 }}

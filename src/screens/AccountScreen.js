@@ -1,6 +1,5 @@
 import React from "react";
 import { View ,Image,Pressable,Text} from "react-native";
-import { MyDrawer } from "../navigation";
 
 const AccountScreen =()=>{
     return(
